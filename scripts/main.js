@@ -25,8 +25,6 @@ function setup() {
 }
 
 function update() {
-  const { verticesInput, intervalInput, speedInput } = paramsForm.elements;
-
   [
     vertexCount,
     verticesInterval,
@@ -44,14 +42,16 @@ function update() {
   }
 }
 
+function windowResized() {
+  const { width } = main.getBoundingClientRect();
+  resizeCanvas(width, width);
+}
+
 function draw() {
   const halfWidth = 0.5 * width;
   const halfWidthWithPadding = 0.5 * (width - 16);
 
   rotation += 1e-3 * deltaTime * rotationSpeed;
-  // rotation %= 1;
-
-  // console.log(rotation);
 
   clear();
 
