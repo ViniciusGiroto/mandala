@@ -50,7 +50,7 @@
   <script type="module">
     if ("serviceWorker" in navigator) {
       await navigator.serviceWorker
-        .register("./scripts/service-worker.js?v1", {scope: "../"});
+        .register("./sw.js?v1");
     }
   </script>
   <script src="./scripts/p5.min.js"></script>
