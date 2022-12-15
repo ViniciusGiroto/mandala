@@ -6,8 +6,16 @@
   "background_color": "#6d28d9",
   "description": "A mandala generator",
   "icons": [{
-    "src": "images/touch/homescreen48.png",
-    "sizes": "48x48",
+    "src": "images/touch/homescreen512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }, {
+    "src": "images/touch/homescreen256.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  }, {
+    "src": "images/touch/homescreen128.png",
+    "sizes": "128x128",
     "type": "image/png"
   }]
 }
