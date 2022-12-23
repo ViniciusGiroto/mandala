@@ -21,7 +21,7 @@ function setup() {
 
   update();
 
-  stroke("#57534e");
+  stroke("#3F3F46");
 }
 
 function update() {
