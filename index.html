@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" style="color-scheme: dark;">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -10,47 +10,59 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row my-3">
+  <div class="container my-3">
+    <div class="row g-3">
       <div class="col-12 col-md-8">
-        <div class="card mb-3">
+        <div class="card">
           <div id="main"></div>
         </div>
       </div>
-      <div class="col-12 col-md-4">
-        <form id="paramsForm">
-          <div class="mb-3">
-            <label for="verticesInput" class="form-label">Vertices</label>
-            <input type="number" value="13" min="2" id="verticesInput" class="form-control">
+      <form id="paramsForm" class="col-12 col-md-4">
+        <div class="row row-cols-1 g-3">
+          <div class="col">
+            <div class="form-floating">
+              <input type="number" value="13" min="2" id="verticesInput" class="form-control">
+              <label for="verticesInput">Vertices</label>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="intervalInput" class="form-label">Interval</label>
-            <input type="number" value="2" step="1" id="intervalInput" class="form-control">
+          <div class="col">
+            <div class="form-floating">
+              <input type="number" value="2" step="1" id="intervalInput" class="form-control">
+              <label for="intervalInput">Interval</label>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="iterationsInput" class="form-label">Iterations</label>
-            <input type="number" value="3" min="1" step="1" id="iterationsInput" class="form-control">
+          <div class="col">
+            <div class="form-floating">
+              <input type="number" value="3" min="1" step="1" id="iterationsInput" class="form-control">
+              <label for="iterationsInput">Iterations</label>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="speedInput" class="form-label">Speed (rotations per second)</label>
-            <input type="number" value="0.1" step="0.1" id="speedInput" class="form-control">
+          <div class="col">
+            <div class="form-floating">
+              <input type="number" value="0.1" step="0.1" id="speedInput" class="form-control">
+              <label for="speedInput">Speed (rotations per second)</label>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="speedFactorInput" class="form-label">Speed factor</label>
-            <input type="number" value="-1.1" step="0.1" id="speedFactorInput" class="form-control">
+          <div class="col">
+            <div class="form-floating">
+              <input type="number" value="-1.1" step="0.1" id="speedFactorInput" class="form-control">
+              <label for="speedFactorInput">Speed factor</label>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="diameterFactorInput" class="form-label">Diameter factor</label>
-            <input type="number" value="0.85" min="0" step="0.1" id="diameterFactorInput" class="form-control">
+          <div class="col">
+            <div class="form-floating">
+              <input type="number" value="0.85" min="0" step="0.1" id="diameterFactorInput" class="form-control">
+              <label for="diameterFactorInput">Diameter factor</label>
+            </div>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
   <script type="module">
     if ("serviceWorker" in navigator) {
       await navigator.serviceWorker
-        .register("./sw.js?v1");
+        .register("./sw.js?v2");
     }
   </script>
   <script src="./scripts/p5.min.js"></script>
