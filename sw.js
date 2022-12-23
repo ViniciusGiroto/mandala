@@ -1,4 +1,4 @@
-const cacheName = "mandala-v1";
+const cacheName = "dev.giroto-v1";
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
